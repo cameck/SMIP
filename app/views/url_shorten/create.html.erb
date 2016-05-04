@@ -27,4 +27,7 @@
       <% end %>
     </div>
   </div>
+  <% if @user_last_url %>
+    <%= flash[:notice] = render 'url' %>
+  <%end%>
 </div>

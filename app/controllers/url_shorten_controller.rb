@@ -3,7 +3,7 @@ class UrlShortenController < ApplicationController
 
   def index
     @new_url = UrlShorten.new
-    @user_last_url = UrlShorten.last
+
   end
 
   def show
@@ -20,7 +20,8 @@ class UrlShortenController < ApplicationController
   def create
     @new_url = UrlShorten.new(clean_params)
     @new_url.save
-    redirect_to root_path
+    @user_last_url = UrlShorten.last
+    # redirect_to create_path
   end
 
 
