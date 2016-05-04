@@ -10,7 +10,13 @@ class UrlShortenController < ApplicationController
     @url_found = UrlShorten.find_by(small_url: params[:small_url])
 
     if @url_found
-      redirect_to @url_found.original_url
+      if @url_found.original_url.include? "http"
+        redirect_to @url_found.original_url
+      else
+        @url_found = @url_found.original_url
+        @url_found.prepend("http://")
+        redirect_to @url_found
+      end
     else
       redirect_to root_path
     end
