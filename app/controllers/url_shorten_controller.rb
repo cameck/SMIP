@@ -1,15 +1,33 @@
 class UrlShortenController < ApplicationController
   before_action :clean_params, only: [:create]
 
-  def create
+  def index
     @new_url = UrlShorten.new
-    @new_url = @new_url.small_url(params[:url])
-    # p @new_url = Rails.root.to_s + @new_url.small_url
-    render 'create'
+    @user_last_url = UrlShorten.last
   end
+
+  def show
+    @url_found = UrlShorten.find_by(id: params[:id])
+
+    if @url_found
+      redirect_to @url_found.original_url
+    else
+      "Hello"
+    end
+
+    # @user_last_url[:id]
+  end
+
+  def create
+    @new_url = UrlShorten.new(clean_params)
+    @new_url.save
+    redirect_to root_path(id: @new_url.id)
+  end
+
 
   private
     def clean_params
-      params.permit(:url)
+      #require for table name permit that value from form (table column)
+      params.require(:url_shorten).permit(:original_url, :small_url)
     end
 end

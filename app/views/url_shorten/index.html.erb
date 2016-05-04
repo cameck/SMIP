@@ -1,0 +1,16 @@
+<h1>Shortner your URL!</h1>
+<p>Paste in your long URL and we will give you a short one you can use! </p>
+
+
+<%= form_for(@new_url, url: shortner_path) do |f|%>
+
+<%= f.hidden_field :small_url, :value => UrlShorten.new.url %>
+<%= f.text_field (:original_url) %>
+<%= f.submit ("Shorten your URL!") %>
+<% end %>
+
+<p>
+  <% if @user_last_url %>
+  <%= link_to (@user_last_url.small_url), @user_last_url.original_url  %>
+  <%end%>
+</p>
