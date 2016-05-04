@@ -7,7 +7,7 @@ class UrlShortenController < ApplicationController
   end
 
   def show
-    @url_found = UrlShorten.find_by(id: params[:id])
+    @url_found = UrlShorten.find_by(small_url: params[:small_url])
 
     if @url_found
       redirect_to @url_found.original_url
