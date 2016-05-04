@@ -1,19 +1,33 @@
-<h1>Shortner your URL!</h1>
-<p>Paste in your long URL and we will give you a short one you can use! </p>
+<div class="container center-block">
 
 
-<%= form_for(@new_url, url: shortner_path) do |f|%>
 
-<%= f.hidden_field :small_url, :value => UrlShorten.new.url %>
-<%= f.text_field (:original_url) %>
-<%= f.submit ("Shorten your URL!") %>
-<% end %>
+  <h1>Shorten your URL!</h1>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <p>Paste in your long URL and we will give you a short one you can use! </p>
+    </div>
 
-<p>
+  </div>
+
+  <div class="row center-block">
+
+    <div class="col-md-6 col-md-offset-3">
+
+
+      <%= form_for(@new_url, url: shortner_path) do |f|%>
+      <div class="form-group">
+        <%= f.hidden_field :small_url, :value => UrlShorten.new.url %>
+        <%= f.text_field (:original_url), class: "form-control" %>
+      </div>
+
+      <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+      Shorten your URL!
+      <% end %>
+      <% end %>
+    </div>
+  </div>
   <% if @user_last_url %>
-  <a href="<%= @user_last_url.original_url %>" target="_blank"> <%= root_url %><%= @user_last_url.id %></a>
-
-
-
+    <%= flash[:notice] = render 'url' %>
   <%end%>
-</p>
+</div>

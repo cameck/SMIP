@@ -12,16 +12,15 @@ class UrlShortenController < ApplicationController
     if @url_found
       redirect_to @url_found.original_url
     else
-      "Hello"
+      redirect_to root_path
     end
 
-    # @user_last_url[:id]
   end
 
   def create
     @new_url = UrlShorten.new(clean_params)
     @new_url.save
-    redirect_to root_path(id: @new_url.id)
+    redirect_to root_path
   end
 
 
