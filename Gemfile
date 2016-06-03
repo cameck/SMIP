@@ -6,6 +6,8 @@ gem 'rails', '4.2.6'
 
 gem 'pg'
 
+gem "responders"
+
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

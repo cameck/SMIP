@@ -1,9 +1,13 @@
 class UrlShortenController < ApplicationController
   before_action :clean_params, only: [:create]
-  respond_to :html, :json
+
 
   def index
     @new_url = UrlShorten.new
+    respond_to do |format|
+      format.html
+      format.json
+    end
 
   end
 
@@ -28,7 +32,7 @@ class UrlShortenController < ApplicationController
     @new_url = UrlShorten.new(clean_params)
     @new_url.save
     @user_last_url = UrlShorten.last
-    # redirect_to create_path
+    # Load Response with Ajax on index page
   end
 
 
