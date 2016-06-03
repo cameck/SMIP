@@ -30,8 +30,12 @@ class UrlShortenController < ApplicationController
 
   def create
     @new_url = UrlShorten.new(clean_params)
+    @new_url.small_url = @new_url.url
     @new_url.save
-    @user_last_url = UrlShorten.last
+
+    @new_url.persisted? ? @small_url = UrlShorten.last.small_url :
+                              @error_message = "Sorry something went wrong - try again or don't it's up to you."
+
     # Load Response with Ajax on index page
   end
 

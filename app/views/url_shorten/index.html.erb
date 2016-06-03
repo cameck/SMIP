@@ -11,7 +11,6 @@
       <div class="col-md-6 col-md-offset-3">
         <%= form_for(@new_url, url: shortner_path, :remote => true) do |f|%>
           <div class="form-group">
-            <%= f.hidden_field :small_url, :value => UrlShorten.new.url %>
             <%= f.text_field (:original_url), class: "form-control" %>
           </div>
           <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
@@ -20,5 +19,6 @@
         <% end %>
       </div>
     </div>
+    <!-- Shortened URL gets displayed here when user clicks enter -->
     <div id="url-holder"></div>
 </div>

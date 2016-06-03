@@ -1,8 +1,19 @@
-<div class="jumbotron center-block">
-  <h3>Your Beautiful New Url:</h3>
-  <p>
-    <a href="<%= @user_last_url.small_url %>" target="_blank">
-      <%= root_url %><%= @user_last_url.small_url %></a>
-  </p>
 
-</div>
+<% if @small_url %>
+
+  <div class="jumbotron center-block">
+    <h3>Your Beautiful New Url:</h3>
+    <p>
+      <a href="<%= @small_url %>" target="_blank">
+        <%= root_url %><%= @small_url %></a>
+    </p>
+
+  </div>
+
+<% else %>
+
+  <div class="jumbotron center-block alert alert-danger">
+    <h3><%= @error_message %></h3>
+  </div>
+
+<% end  %>
