@@ -1,5 +1,6 @@
 class UrlShortenController < ApplicationController
   before_action :clean_params, only: [:create]
+  respond_to :html, :json
 
   def index
     @new_url = UrlShorten.new
