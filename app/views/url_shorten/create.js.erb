@@ -1,3 +1,5 @@
+//Hide and show new values
 $('#url_shorten_original_url').val('');
-$('#url-holder').html("<%= j (render 'url') %>").slideDown(400);
-$('#url-holder').slideDown(350);
+$('#url-holder').slideUp(400);
+$('#url-holder').html("<%= j (render 'url') %>");
+$('#url-holder').slideDown(400);
