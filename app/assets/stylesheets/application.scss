@@ -19,6 +19,12 @@ a:hover {
   color: #DE6736;
   text-decoration: none;
 }
+
+.container.center-block {
+    margin-bottom: 4em;
+}
+
+
 // Home Page
 #url-holder {
   display: none;
@@ -27,10 +33,19 @@ a:hover {
 
 // Show New URL Part
 .jumbotron {
-  margin-top: 2em;
-  background-color: #E5E9EB;
+  margin-top: 5em;
+  background-color: transparent;
+  color: #7BBC53;
+  border: 1px solid #000;
+  border-width: 1px 0;
 }
 
+@media screen and (min-width: 768px) {
+  .jumbotron {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+}
 
 .center-block {
   text-align: center;
@@ -44,15 +59,17 @@ a:hover {
   font-size: 1em;
 }
 
-
+#url {
+  color: #67C1EC;
+}
 // Footer
 
 .navbar-default {
-  background-color: transparent;
+  background-color: #fff;
   border-color: #000;
 }
 
-.navbar-text {
+.navbar-default .navbar-text {
   color: #000;
 }
 
@@ -82,7 +99,7 @@ button {
 }
 #create-button:hover {
   color: #DE6736;
-  width: 25%;
+  width: 27%;
   border-color: #DE6736;
 }
 
