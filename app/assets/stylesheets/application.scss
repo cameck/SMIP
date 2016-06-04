@@ -38,6 +38,7 @@ a:hover {
   color: #7BBC53;
   border: 1px solid #000;
   border-width: 1px 0;
+  width: 75%;
 }
 
 @media screen and (min-width: 768px) {
@@ -97,6 +98,21 @@ button {
   cursor: pointer;
   transition: 0.15s ease-in;
 }
+
+.btn:active,
+.btn.active {
+  box-shadow: none;
+}
+
+.btn:focus,
+.btn.focus,
+.btn:active:focus,
+.btn:active.focus,
+.btn.active:focus,
+.btn.active.focus {
+  outline: 0 solid transparent;
+}
+
 #create-button:hover {
   color: #DE6736;
   width: 27%;
@@ -105,26 +121,48 @@ button {
 
 .form-control {
   border: 3px solid #000;
-  border-width: 0 0 3px 0;
+  border-width: 0 0 1.84px 0;
   box-shadow: none;
   transition: all .5s;
-  color: #67C1EC;
-  font-size: 3em;
   border-radius: 1px;
   text-align: center;
   height: auto;
   padding: 1px 12px;
+  color: #67C1EC;
+  font-size: 2em;
 }
+
 .form-control:focus,
-.form-control:active,
-#create-button:hover .form-control {
+.form-control:active {
   border-color: transparent;
   box-shadow: none;
-
+  font-size: 3em;
 }
 
+// Disable default browser styling
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
   background-color: transparent !important;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: opacity 0.5s 0.5s ease;
+  opacity: 0;
+}
+
+[placeholder]::-webkit-input-placeholder {
+    // color: rgba(103,193,236, 0.5);
+    color: #e4e4e4;
+}
+[placeholder]:-moz-placeholder {
+    // color: rgba(103,193,236, 0.5);
+    color: #e4e4e4;
+}
+[placeholder]::-moz-placeholder {
+    // color: rgba(103,193,236, 0.5);
+    color: #e4e4e4;
+}
+[placeholder]:-ms-input-placeholder {
+    color: #e4e4e4;
 }

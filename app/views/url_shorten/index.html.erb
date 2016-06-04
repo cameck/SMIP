@@ -12,7 +12,8 @@
         <%= form_for(@new_url, url: shortner_path, remote: true) do |f|%>
           <div class="form-group">
             <%= f.text_field (:original_url), class: "form-control",
-                              placeholder: "Paste Your Long URL Here" %>
+                              placeholder: "Paste Your Long URL Here",
+                              required: true %>
           </div>
           <%= button_tag(type: 'submit', class: "btn btn-primary", id: "create-button") do %>
           "SMIP" Your URL!

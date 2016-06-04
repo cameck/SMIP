@@ -18,6 +18,7 @@
 // Replicate hover effect for input form when user hovers over button
 
 $(document).ready(function(){
+  // Hide border of input form when hovering submit button
   $( "#create-button" ).hover(
     function() {
       $( ".form-control" ).css("border-color", "transparent");
@@ -25,4 +26,5 @@ $(document).ready(function(){
       $( ".form-control" ).css("border-color", "#000");
     }
   );
+
 });
