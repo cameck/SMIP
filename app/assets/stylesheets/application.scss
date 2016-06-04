@@ -16,7 +16,7 @@ body {
 }
 
 a:hover {
-  color: #f8584e;
+  color: #DE6736;
   text-decoration: none;
 }
 // Home Page
@@ -48,15 +48,17 @@ a:hover {
 // Footer
 
 .navbar-default {
-  background-color: #E5E9EB;
-  border-color: transparent;
+  background-color: transparent;
+  border-color: #000;
 }
 
 .navbar-text {
-  color: #49606B;
+  color: #000;
 }
 
-
+.glyphicon-star {
+  color: #E6B90D;
+}
 // form
 #form-wrap {
   margin-top: 4em;
@@ -79,8 +81,9 @@ button {
   transition: 0.15s ease-in;
 }
 #create-button:hover {
-  color: #f8584e;
+  color: #DE6736;
   width: 25%;
+  border-color: #DE6736;
 }
 
 .form-control {
@@ -88,15 +91,23 @@ button {
   border-width: 0 0 3px 0;
   box-shadow: none;
   transition: all .5s;
-  color: #f8584e;
+  color: #67C1EC;
   font-size: 3em;
   border-radius: 1px;
   text-align: center;
   height: auto;
   padding: 1px 12px;
 }
-.form-control:focus {
+.form-control:focus,
+.form-control:active,
+#create-button:hover .form-control {
   border-color: transparent;
   box-shadow: none;
 
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  background-color: transparent !important;
 }

@@ -14,3 +14,15 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+// Replicate hover effect for input form when user hovers over button
+
+$(document).ready(function(){
+  $( "#create-button" ).hover(
+    function() {
+      $( ".form-control" ).css("border-color", "transparent");
+    }, function() {
+      $( ".form-control" ).css("border-color", "#000");
+    }
+  );
+});
