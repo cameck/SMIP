@@ -2,10 +2,13 @@
 @import "bootstrap";
 
 
+// Home Page
 #url-holder {
   display: none;
 }
 
+
+// Show New URL Part
 .jumbotron {
   margin-top: 2em;
 }
@@ -17,4 +20,8 @@
 
 .jumbotron a {
   font-size: 2em;
+}
+
+#original_url {
+  font-size: 1em;
 }

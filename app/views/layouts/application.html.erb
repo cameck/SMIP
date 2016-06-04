@@ -8,7 +8,20 @@
 </head>
 <body>
 
-<%= yield %>
+  <%= yield %>
+
+  <div class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+      <p class="navbar-text pull-left">
+        &#169;<%= Time.now.year %> - SMIP<sup>&#174;</sup>
+      </p>
+
+      <p class="pull-right navbar-text">
+        <span class="glyphicon glyphicon-star"></span> A project by <a href="http://cameroneckelberry.com/" target="_blank">Cameron Eckelberry</a>
+      </p>
+
+    </div>
+  </div>
 
 </body>
 </html>

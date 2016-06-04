@@ -33,9 +33,12 @@ class UrlShortenController < ApplicationController
     @new_url.small_url = @new_url.url
     @new_url.save
 
-    @new_url.persisted? ? @small_url = UrlShorten.last.small_url :
-                              @error_message = "Sorry something went wrong - try again or don't it's up to you."
-
+    if @new_url.persisted?
+      @small_url = @new_url.small_url
+      @original_url = @new_url.original_url
+    else
+      @error_message = "Sorry something went wrong, please try again."
+    end
     # Load Response with Ajax on index page
   end
 
