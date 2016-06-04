@@ -6,6 +6,9 @@
     <p>
       <a href="<%= @small_url %>" target="_blank">
         <%= root_url %><%= @small_url %></a>
+        <span class="glyphicon glyphicon-copy my_clip_button" data-clipboard-target="small_url"
+              data-clipboard-text='<%= root_url %><%= @small_url %>'
+              title='Click me to copy to clipboard.' id='d_clip_button'></span>
     </p>
     <p id="original_url">
       (<em>Original URL:<span id="url"> <%= @original_url %></span></em>)
@@ -20,3 +23,10 @@
   </div>
 
 <% end  %>
+
+<script>
+$(document).ready(function() {
+var clip = new ZeroClipboard($("#d_clip_button"))
+});
+
+</script>

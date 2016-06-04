@@ -8,6 +8,8 @@ gem 'pg'
 
 gem "responders"
 
+gem 'zeroclipboard-rails'
+
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
