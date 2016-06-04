@@ -1,4 +1,6 @@
-== Bit.ly Clone
+== SMIP
 
 
-This is a clone of bit.ly's URL shortener.
+A really simple URL Shortener.
+
+smip.co
