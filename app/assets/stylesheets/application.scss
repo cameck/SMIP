@@ -2,6 +2,23 @@
 @import "bootstrap";
 
 
+
+// General Styles
+
+a {
+  color: #000;
+  transition: all .5s;
+}
+
+body {
+  color: #000;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+a:hover {
+  color: #f8584e;
+  text-decoration: none;
+}
 // Home Page
 #url-holder {
   display: none;
@@ -11,6 +28,7 @@
 // Show New URL Part
 .jumbotron {
   margin-top: 2em;
+  background-color: #E5E9EB;
 }
 
 
@@ -24,4 +42,16 @@
 
 #original_url {
   font-size: 1em;
+}
+
+
+// Footer
+
+.navbar-default {
+  background-color: #E5E9EB;
+  border-color: transparent;
+}
+
+.navbar-text {
+  color: #49606B;
 }
