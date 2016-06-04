@@ -55,3 +55,48 @@ a:hover {
 .navbar-text {
   color: #49606B;
 }
+
+
+// form
+#form-wrap {
+  margin-top: 4em;
+}
+#create-button {
+  border: 3px solid #000;
+  background-color: white;
+  color: #000;
+  border-width: 0 1px;
+  width: 55%;
+}
+button {
+  position: relative;
+  text-transform: uppercase;
+  outline: 0;
+  overflow:hidden;
+  background: none;
+  z-index: 1;
+  cursor: pointer;
+  transition: 0.15s ease-in;
+}
+#create-button:hover {
+  color: #f8584e;
+  width: 25%;
+}
+
+.form-control {
+  border: 3px solid #000;
+  border-width: 0 0 3px 0;
+  box-shadow: none;
+  transition: all .5s;
+  color: #f8584e;
+  font-size: 3em;
+  border-radius: 1px;
+  text-align: center;
+  height: auto;
+  padding: 1px 12px;
+}
+.form-control:focus {
+  border-color: transparent;
+  box-shadow: none;
+
+}
