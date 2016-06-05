@@ -46,11 +46,13 @@ a:hover {
 .jumbotron {
   margin-top: 5em;
   background-color: #F1F6F8;
-  // color: #7BBC53;
   color: #000;
-  // border: 1px solid #000;
-  // border-width: 1px 0;
-  // width: 75%;
+}
+
+@media screen and (max-width: 665px) {
+  .jumbotron a {
+    font-size: 1em !important;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -77,7 +79,6 @@ a:hover {
 }
 
 // Footer
-
 .navbar-default {
   background-color: #fff;
   border-color: #000;
@@ -138,25 +139,7 @@ button {
 
 #create-button:hover{
   color: #DE6736;
-  width: 27%;
-  border-color: #DE6736;
-}
-
-
-#d_clip_button {
-  border: 3px solid #000;
-  background-color: white;
-  color: #000;
-  border-width: 0 1px;
-  width: auto;
-  cursor: pointer;
-  display: block;
-  margin: 0 auto;
-}
-
-#d_clip_button:hover {
-  color: #DE6736;
-
+  width: 33%;
   border-color: #DE6736;
 }
 
@@ -201,34 +184,32 @@ select:-webkit-autofill {
 }
 
 [placeholder]::-webkit-input-placeholder {
-    // color: rgba(103,193,236, 0.5);
     color: #e4e4e4;
 }
+
 [placeholder]:-moz-placeholder {
-    // color: rgba(103,193,236, 0.5);
     color: #e4e4e4;
 }
+
 [placeholder]::-moz-placeholder {
-    // color: rgba(103,193,236, 0.5);
     color: #e4e4e4;
 }
+
 [placeholder]:-ms-input-placeholder {
     color: #e4e4e4;
 }
+
   //Selection Text Styles
 ::selection {
   background: #FAB9AC;
-// color:#555;
 }
 
 ::-moz-selection {
   background: #FAB9AC;
-// color:#555;
 }
 
 ::-webkit-selection {
   background: #FAB9AC;
-// color:#555;
 }
 
 
