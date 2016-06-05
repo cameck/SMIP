@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
@@ -52,6 +53,9 @@ $(document).ready(function(){
     console.log("CLICKED!");
     if (e.target.id === 'd_clip_button') {
           SelectText('copy-link');
+          $('#copy-link').tooltip({title: "Yolo"});
+          $("[data-toggle='tooltip']").tooltip('show');
+
           console.log("DONE!");
         }
   });
