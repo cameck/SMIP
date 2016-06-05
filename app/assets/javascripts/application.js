@@ -61,10 +61,16 @@ $(document).ready(function(){
   $(document).on('click', '#create-button', function(e) {
       // keep formatting the same
     $('.form-control').css('font-size', '3em');
+    $('#url-holder').slideUp(400);
     if (e.target.id === 'create-button') {
+      // Start Loading Animation
+      $( document ).ajaxStart(function() {
+        $('.loader').css('display', 'block');
+      });
 
         // When ajaxStart is finished create selection text + tooltip
       $( document ).ajaxComplete(function() {
+        $('.loader').fadeOut();
         SelectText('copy-link');
         $('#copy-link').tooltip({title: 'Press "' + tooltipText + ' + c" to copy', trigger: "click"});
         $("[data-toggle='tooltip']").tooltip('show');
