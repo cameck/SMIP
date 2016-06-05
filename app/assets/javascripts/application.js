@@ -31,11 +31,13 @@ $(document).ready(function(){
   $('.form-control').click(function() {
     $(this).css('font-size', '3em');
   });
+
+
   // Copy to Clipboard function
 
-  // Get OS for appropriate key commands
+    // Get OS for appropriate key commands
   var tooltipText = ( navigator.platform.toLowerCase().includes("mac") ) ? "cmd" : "ctrl";
-  // Select text
+    // Select text
   function SelectText(element) {
     var doc = document;
     var text = doc.getElementById(element);
@@ -55,17 +57,22 @@ $(document).ready(function(){
     }
   }
 
-  // Click to select text and initiate tooltip
-  $(document).on('click', '#url-holder', function(e) {
-    // keep formatting the same
+    // Click to select text and initiate tooltip
+  $(document).on('click', '#create-button', function(e) {
+      // keep formatting the same
     $('.form-control').css('font-size', '3em');
-    if (e.target.id === 'd_clip_button') {
+    if (e.target.id === 'create-button') {
 
-      SelectText('copy-link');
-      $('#copy-link').tooltip({title: 'Press "' + tooltipText + ' + c" to copy'});
-      $("[data-toggle='tooltip']").tooltip('show');
-    }
+        // When ajaxStart is finished create selection text + tooltip
+      $( document ).ajaxComplete(function() {
+        SelectText('copy-link');
+        $('#copy-link').tooltip({title: 'Press "' + tooltipText + ' + c" to copy', trigger: "click"});
+        $("[data-toggle='tooltip']").tooltip('show');
+      })
+    };
   });
-
-
+    // Hide tooltip if user clicks off of it
+  $(document).on('click', function() {
+    $("[data-toggle='tooltip']").tooltip('hide');
+  });
 });

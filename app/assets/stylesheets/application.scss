@@ -127,13 +127,15 @@ button {
   background-color: white;
   color: #000;
   border-width: 0 1px;
-  width: 12%;
+  width: auto;
   cursor: pointer;
+  display: block;
+  margin: 0 auto;
 }
 
 #d_clip_button:hover {
   color: #DE6736;
-  width: 10%;
+
   border-color: #DE6736;
 }
 
