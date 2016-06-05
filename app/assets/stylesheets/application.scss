@@ -81,6 +81,7 @@ a:hover {
 #form-wrap {
   margin-top: 4em;
 }
+
 #create-button {
   border: 3px solid #000;
   background-color: white;
@@ -88,6 +89,7 @@ a:hover {
   border-width: 0 1px;
   width: 55%;
 }
+
 button {
   position: relative;
   text-transform: uppercase;
@@ -113,11 +115,26 @@ button {
   outline: 0 solid transparent;
 }
 
-#create-button:hover {
+#create-button:hover{
   color: #DE6736;
   width: 27%;
   border-color: #DE6736;
 }
+
+
+#d_clip_button {
+  border: 3px solid #000;
+  background-color: white;
+  color: #000;
+  border-width: 0 1px;
+  cursor: pointer;
+}
+
+// #d_clip_button:hover {
+//   color: #DE6736;
+//
+//   border-color: #DE6736;
+// }
 
 .form-control {
   border: 3px solid #000;
