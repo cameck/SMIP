@@ -28,36 +28,43 @@ $(document).ready(function(){
     }
   );
 
+  $('.form-control').click(function() {
+    $(this).css('font-size', '3em');
+  });
   // Copy to Clipboard function
-  function SelectText(element) {
-      var doc = document;
-      var text = doc.getElementById(element);
-      var range;
-      var selection;
 
-      if (doc.body.createTextRange) {
-          range = document.body.createTextRange();
-          range.moveToElementText(text);
-          range.select();
-      } else if (window.getSelection) {
-          selection = window.getSelection();
-          range = document.createRange();
-          range.selectNodeContents(text);
-          selection.removeAllRanges();
-          selection.addRange(range);
-      }
+  // Get OS for appropriate key commands
+  var tooltipText = ( navigator.platform.toLowerCase().includes("mac") ) ? "cmd" : "ctrl";
+  // Select text
+  function SelectText(element) {
+    var doc = document;
+    var text = doc.getElementById(element);
+    var range;
+    var selection;
+
+    if (doc.body.createTextRange) {
+      range = document.body.createTextRange();
+      range.moveToElementText(text);
+      range.select();
+    } else if (window.getSelection) {
+      selection = window.getSelection();
+      range = document.createRange();
+      range.selectNodeContents(text);
+      selection.removeAllRanges();
+      selection.addRange(range);
+    }
   }
 
-
+  // Click to select text and initiate tooltip
   $(document).on('click', '#url-holder', function(e) {
-    console.log("CLICKED!");
+    // keep formatting the same
+    $('.form-control').css('font-size', '3em');
     if (e.target.id === 'd_clip_button') {
-          SelectText('copy-link');
-          $('#copy-link').tooltip({title: "Yolo"});
-          $("[data-toggle='tooltip']").tooltip('show');
 
-          console.log("DONE!");
-        }
+      SelectText('copy-link');
+      $('#copy-link').tooltip({title: 'Press "' + tooltipText + ' + c" to copy'});
+      $("[data-toggle='tooltip']").tooltip('show');
+    }
   });
 
 
