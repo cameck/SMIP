@@ -74,6 +74,9 @@ $(document).ready(function(){
         SelectText('copy-link');
         $('#copy-link').tooltip({title: 'Press "' + tooltipText + ' + c" to copy', trigger: "click"});
         $("[data-toggle='tooltip']").tooltip('show');
+        // Scroll to bottom of page
+        var topLocation =  $('#copy-link').position().top;
+        $('html,body').animate( { scrollTop: topLocation} , 1000);
       })
     };
   });

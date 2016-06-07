@@ -36,7 +36,14 @@ a:hover {
   width: 100%;
 }
 
+
 @media screen and (min-width: 768px) {
+  #smip-logo {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1250px) {
   #smip-logo {
     width: 75%;
   }
