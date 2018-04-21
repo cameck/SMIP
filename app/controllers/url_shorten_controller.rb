@@ -25,7 +25,7 @@ class UrlShortenController < ApplicationController
     @new_url.format_url
 
     if @new_url.url_exist? && @new_url.save && @new_url.persisted?
-      @small_url = @new_url.small_url
+      @small_url = root_url(only_path: false) + @new_url.small_url
       @original_url = @new_url.original_url
     else
       @error_message = "That's not a valid URL, try again :D."

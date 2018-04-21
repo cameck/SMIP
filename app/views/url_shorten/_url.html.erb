@@ -5,8 +5,8 @@
     <h3>Your Beautiful New Url:</h3>
     <p>
       <a href="<%= @small_url %>" target="_blank" id="copy-link" data-toggle="tooltip">
-        smip.co/<%= @small_url %></a>
-
+        <%= @small_url %>
+      </a>
     </p>
     <p id="original_url">
       (<em>Original URL:<span id="url"> <%= @original_url %></span></em>)
@@ -20,5 +20,4 @@
     <h3><%= @error_message %></h3>
   </div>
 
-<% end  %>
-  
+<% end %>
