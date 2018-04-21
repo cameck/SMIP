@@ -1,0 +1,16 @@
+current directory: /Users/cameron/coding_projects/SMIP/vendor/bundle/ruby/2.3.0/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+/Users/cameron/.rvm/rubies/ruby-2.3.4/bin/ruby -r ./siteconf20180421-35014-1y0ysne.rb extconf.rb
+
+current directory: /Users/cameron/coding_projects/SMIP/vendor/bundle/ruby/2.3.0/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+make "DESTDIR=" clean
+make: *** No rule to make target `clean'.  Stop.
+
+current directory: /Users/cameron/coding_projects/SMIP/vendor/bundle/ruby/2.3.0/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+make "DESTDIR="
+echo "Nada."
+Nada.
+
+current directory: /Users/cameron/coding_projects/SMIP/vendor/bundle/ruby/2.3.0/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+make "DESTDIR=" install
+echo "Nada."
+Nada.

@@ -1,0 +1,15 @@
+current directory: /Users/cameron/coding_projects/SMIP/vendor/bundle/ruby/2.4.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+/Users/cameron/.rvm/rubies/ruby-2.4.1/bin/ruby -r ./siteconf20180421-23702-cfm4zt.rb extconf.rb
+creating Makefile
+
+current directory: /Users/cameron/coding_projects/SMIP/vendor/bundle/ruby/2.4.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /Users/cameron/coding_projects/SMIP/vendor/bundle/ruby/2.4.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.bundle
+
+current directory: /Users/cameron/coding_projects/SMIP/vendor/bundle/ruby/2.4.0/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 debug_inspector.bundle ./.gem.20180421-23702-xg0kzr
