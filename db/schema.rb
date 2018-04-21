@@ -23,9 +23,4 @@ ActiveRecord::Schema.define(version: 20160503171233) do
     t.datetime "updated_at",   null: false
   end
 
-  create_table "url_shortners", force: :cascade do |t|
-    t.string "original_url"
-    t.string "small_url"
-  end
-
 end
