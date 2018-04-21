@@ -3,4 +3,4 @@
 
 A really simple URL Shortener.
 
-smip.co
+https://smip.herokuapp.com/
