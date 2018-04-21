@@ -16,8 +16,7 @@ class UrlShorten < ActiveRecord::Base
     path = (url.path if url.path.present?) || '/'
     res = req.request_head(path)
     res.code != '404'
-  rescue => e
-    raise e
-  #   false # false if can't find the server
+  rescue SocketError
+    false
   end
 end
